@@ -5,6 +5,8 @@ const dotenv = require('dotenv');
 const colors = require('colors');
 const connectDb = require("./config/connectDb.js");
 const userRoute = require('./routes/userRoutes')
+const path = require('path')
+ 
 
 //config dot env file 
 dotenv.config();
@@ -33,6 +35,19 @@ app.use('/api/v1/users', userRoute)
 //transections routes
 app.use("/api/v1/transections",require("./routes/transectionRoutes"));
 //port
+
+
+
+// for deployment
+app.use(express.static(path.join(__dirname, '/client/build')));
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    });
+
+    //end deployment
+
+
 
 
 //listening
