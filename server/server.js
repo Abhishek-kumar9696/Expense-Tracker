@@ -3,7 +3,7 @@ const cors = require('cors');
 const morgan = require('morgan');
 const dotenv = require('dotenv');
 const colors = require('colors');
-const connectDb = require("./config/connectDB");
+const connectDb = require("./config/connectDB.js");
 const userRoute = require('./routes/userRoutes')
 
 //config dot env file 
