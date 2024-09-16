@@ -1,4 +1,4 @@
-const transectionModel = require('../models/transectionModel');
+const transectionModel = require('../models/transectionModel.js');
 const moment = require('moment');
 
 const getALLTransection = async (req, res) => {
