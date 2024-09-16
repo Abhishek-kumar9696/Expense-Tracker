@@ -10,7 +10,7 @@ import { Table } from "antd";
 import moment from 'moment';
 import { UnorderedListOutlined, AreaChartOutlined, EditOutlined, DeleteOutlined } from '@ant-design/icons';
 import Analytics from '../components/Analytics';
-const backendURL = process.env.REACT_APP_BACKEND_URL;
+
 
 const { RangePicker } = DatePicker;
 
@@ -61,7 +61,7 @@ const HomePage = () => {
       try {
         const user = JSON.parse(localStorage.getItem('user'));
         setLoading(true);
-        const response = await axios.post('/transections/get-transection', { userid: user._id, frequency, selectedDate, type });
+        const response = await axios.post('api/v1/transections/get-transection', { userid: user._id, frequency, selectedDate, type });
         setLoading(false);
         setAllTransactions(response.data);
       } catch (error) {
@@ -77,7 +77,7 @@ const HomePage = () => {
       const user = JSON.parse(localStorage.getItem('user'));
       setLoading(true);
       if (editable) {
-        await axios.post('/transections/edit-transection', {
+        await axios.post('api/v1/transections/edit-transection', {
           payload: {
             ...values,
             userId: user._id
@@ -87,7 +87,7 @@ const HomePage = () => {
         setLoading(false);
         message.success('Transaction Updated Successfully');
       } else {
-        await axios.post('/transections/add-transection', { ...values, userid: user._id });
+        await axios.post('api/v1/transections/add-transection', { ...values, userid: user._id });
         setLoading(false);
         message.success('Transaction Added Successfully');
       }
