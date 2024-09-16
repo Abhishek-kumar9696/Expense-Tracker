@@ -43,7 +43,7 @@
 
 
 // module.exports = {loginController,registerController};
-const userModel = require("../models/userModel");
+const userModel = require("../models/userModel.js");
 
 // login callback
 const loginController = async (req, res) => {
