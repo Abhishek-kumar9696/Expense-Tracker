@@ -1,7 +1,7 @@
 //const { loginController, registerController } = require("../controllers/userController")
 
 const express = require('express')
-const { addTransection, getALLTransection ,editTransection} = require('../controllers/transectionCtrl')
+const { addTransection, getALLTransection ,editTransection} = require('../controllers/transectionCtrl.js')
 
 //router object
 
