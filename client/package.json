@@ -1,5 +1,5 @@
 {
-  "proxy": "http://localhost:8082/api/v1",
+  "proxy": "https://expense-tracker-vth8.onrender.com",
   "name": "client",
   "version": "0.1.0",
   "private": true,
