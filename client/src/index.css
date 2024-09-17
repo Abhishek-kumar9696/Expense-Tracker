@@ -1,0 +1,77 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+
+.navbar{
+  background-color:rgb(173, 139, 160) !important; 
+ }
+.register-page{
+  
+  justify-items: center;
+  
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  background-size: cover;
+  
+  background-color: aquamarine;
+
+}
+
+
+/**Transaction page*/
+.filters{
+  display : flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:15px 20px;
+  box-shadow: 0 0 5px grey;
+
+}
+/**Transaction page*/
+
+/*   antd icons  */
+.anticon svg{
+  font-size: 20px;
+  cursor: pointer;
+}
+.active-icon{
+  color:black;
+}
+.inactive-icon{
+  color: grey;
+}
+.switch-icons{
+  border: 1px solid black;
+  border-radius: 5px;
+}
+/* Ensure the body and html elements take full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Layout CSS */
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1; /* This ensures the content area expands to fill the remaining space */
+  padding-bottom: 20px; /* Avoid overlap with footer */
+}
+
+footer {
+  padding: 10px;
+  background-color: #f1f1f1;
+  text-align: center;
+}
